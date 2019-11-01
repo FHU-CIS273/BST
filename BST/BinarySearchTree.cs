@@ -78,11 +78,17 @@ namespace BST
         // TODO
         public bool Remove(int key)
         {
+            // find the node with the given key
+
+            // find the parent
+
+            // call RemoveRecursive(parent, node)
+
             return true;
         }
 
         // TODO
-        private bool RemoveRecursive(Node<T> node, int key)
+        private bool RemoveRecursive(Node<T> parent, Node<T> node)
         {
             return true;
         }
@@ -108,7 +114,7 @@ namespace BST
         }
 
 
-        // TODO
+        
         public List<int> InOrderKeys
         {
             get
@@ -120,10 +126,17 @@ namespace BST
             }
         }
 
-        // TODO
+        
         private void InOrderKeysRecursive(Node<T> node, List<int> list)
         {
-            
+            if (node == null)
+            {
+                return;
+            }
+
+            InOrderKeysRecursive(node.Left, list);
+            list.Add(node.Key);
+            InOrderKeysRecursive(node.Right, list);
         }
 
 
@@ -141,7 +154,14 @@ namespace BST
         // TODO
         private void PreOrderKeysRecursive(Node<T> node, List<int> list)
         {
-            
+            if (node == null)
+            {
+                return;
+            }
+
+            list.Add(node.Key);
+            PreOrderKeysRecursive(node.Left, list);
+            PreOrderKeysRecursive(node.Right, list);
         }
 
         
