@@ -113,7 +113,6 @@ namespace BST
             return null;
         }
 
-
         
         public List<int> InOrderKeys
         {
@@ -126,7 +125,6 @@ namespace BST
             }
         }
 
-        
         private void InOrderKeysRecursive(Node<T> node, List<int> list)
         {
             if (node == null)
@@ -140,7 +138,6 @@ namespace BST
         }
 
 
-        
         public List<int> PreOrderKeys
         {
             get
@@ -179,8 +176,6 @@ namespace BST
         {
           
         }
-
-
 
     }
 }
